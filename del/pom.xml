@@ -45,6 +45,11 @@
         <groupId>org.springframework.security</groupId>
         <artifactId>spring-security-web</artifactId>
     </dependency>
+    <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <scope>runtime</scope>
+    </dependency>
 
     <!-- Database Dependencies -->
     <dependency>
@@ -71,6 +76,17 @@
         <scope>runtime</scope>
         <optional>true</optional>
     </dependency>
+    <dependency>
+    <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct</artifactId>
+        <version>1.5.0.Final</version>
+    </dependency>
+    <dependency>
+    <groupId>org.mapstruct</groupId>
+    <artifactId>mapstruct-processor</artifactId>
+    <version>1.5.0.Final</version>
+    <scope>provided</scope>
+</dependency>
 
     <!-- JUnit 5 Dependencies -->
     <dependency>
@@ -95,6 +111,10 @@
                 <artifactId>junit-vintage-engine</artifactId>
             </exclusion>
         </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
     </dependency>
 </dependencies>
 

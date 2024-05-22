@@ -54,3 +54,11 @@ CREATE TABLE IF NOT EXISTS shipment_routes (
     CONSTRAINT fk_route FOREIGN KEY(route_id) REFERENCES routes(id),
     PRIMARY KEY (shipment_id, route_id)
 );
+
+-- AuthToken Table
+CREATE TABLE auth_token (
+    id SERIAL PRIMARY KEY,
+    token VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
