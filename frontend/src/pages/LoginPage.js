@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, Paper } from '@mui/material';
 import axios from 'axios';
 
+
 const LoginPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -10,7 +11,7 @@ const LoginPage = () => {
         e.preventDefault();
         try {
             const response = await axios.post('/auth/login', { username, password });
-            alert(response.data);
+            alert('Успешная авторизация!');
         } catch (error) {
             alert('Ошибка входа');
         }
